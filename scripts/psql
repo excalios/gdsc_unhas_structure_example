@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+source .env
+
+docker exec -it structure_example-db-1 \
+  psql \
+  -d 'postgresql://postgres:postgres@127.0.0.1:5432/gdsc_structure' \
+  -P expanded=auto
